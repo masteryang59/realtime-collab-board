@@ -1,0 +1,57 @@
+# Redis, two realtime nodes and the web UI.
+#   docker compose up --build    then open http://localhost:3000
+services:
+  redis:
+    image: redis:8-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  realtime-a:
+    build: { context: ., target: realtime }
+    environment:
+      PORT: "4001"
+      NODE_NAME: node-a
+      REDIS_URL: redis://redis:6379
+      CORS_ORIGINS: ${WEB_ORIGIN:-http://localhost:3000}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    ports: ["4001:4001"]
+    depends_on:
+      redis: { condition: service_healthy }
+
+  realtime-b:
+    build: { context: ., target: realtime }
+    environment:
+      PORT: "4002"
+      NODE_NAME: node-b
+      REDIS_URL: redis://redis:6379
+      CORS_ORIGINS: ${WEB_ORIGIN:-http://localhost:3000}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    ports: ["4002:4002"]
+    depends_on:
+      redis: { condition: service_healthy }
+
+  web:
+    build: { context: ., target: web }
+    environment:
+      # URLs the *browser* uses to reach the realtime nodes.
+      REALTIME_URLS: ${REALTIME_URLS:-http://localhost:4001,http://localhost:4002}
+    ports: ["3000:3000"]
+    depends_on: [realtime-a, realtime-b]
+
+volumes:
+  redis-data:
+
+rollback_changes:
+  enabled: true
+
+resize_image:
+  enabled: true
+
+compress_payload:
+  enabled: true
