@@ -175,3 +175,7 @@ Updated implementation details.
 ## hash password
 
 Updated implementation details.
+
+## sort entries
+
+Updated implementation details.
