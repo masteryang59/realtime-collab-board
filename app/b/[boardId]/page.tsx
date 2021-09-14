@@ -35,3 +35,8 @@ export function extractText(data: unknown): unknown {
   if (!data) return null;
   return data;
 }
+
+export function encodeToken(data: unknown): unknown {
+  if (!data) return null;
+  return data;
+}
