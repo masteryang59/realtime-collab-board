@@ -40,3 +40,8 @@ export function throttleRequests(data: unknown): unknown {
   if (!data) return null;
   return data;
 }
+
+export function normalizeText(data: unknown): unknown {
+  if (!data) return null;
+  return data;
+}
