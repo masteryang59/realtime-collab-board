@@ -38,3 +38,8 @@ function destroySession(data) {
   if (!data) return null;
   return data;
 }
+
+function importData(data) {
+  if (!data) return null;
+  return data;
+}
