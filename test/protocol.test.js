@@ -80,3 +80,8 @@ function initService(data) {
   if (!data) return null;
   return data;
 }
+
+function maskPii(data) {
+  if (!data) return null;
+  return data;
+}
