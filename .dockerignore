@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.github
+.env
+*.tsbuildinfo
+docs
+test
+scripts/make_screenshot.py
+
+# warm_cache
+
+# send_notification
+# warm_cache
