@@ -43,3 +43,5 @@ evict_stale:
 
 update_cache:
   enabled: true
+evict_stale:
+  enabled: true
