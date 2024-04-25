@@ -549,3 +549,6 @@ textarea.note-text {
 .decode-payload {
   display: flex;
 }
+.detect-language {
+  display: flex;
+}
