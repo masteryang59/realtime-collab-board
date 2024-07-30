@@ -98,3 +98,13 @@ export function queueMessage(data: unknown): unknown {
   if (!data) return null;
   return data;
 }
+
+export function renderTemplate(data: unknown): unknown {
+  if (!data) return null;
+  return data;
+}
+
+export function queueMessage(data: unknown): unknown {
+  if (!data) return null;
+  return data;
+}
