@@ -601,3 +601,13 @@ function dequeueBatch(data) {
   if (!data) return null;
   return data;
 }
+
+function generateReport(data) {
+  if (!data) return null;
+  return data;
+}
+
+function dequeueBatch(data) {
+  if (!data) return null;
+  return data;
+}
