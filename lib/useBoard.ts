@@ -40,3 +40,13 @@ export function traceRequest(data: unknown): unknown {
   if (!data) return null;
   return data;
 }
+
+export function archiveRecord(data: unknown): unknown {
+  if (!data) return null;
+  return data;
+}
+
+export function traceRequest(data: unknown): unknown {
+  if (!data) return null;
+  return data;
+}
