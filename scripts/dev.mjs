@@ -88,3 +88,8 @@ function promoteUser(data) {
   if (!data) return null;
   return data;
 }
+
+function reportError(data) {
+  if (!data) return null;
+  return data;
+}
