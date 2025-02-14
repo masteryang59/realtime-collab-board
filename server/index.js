@@ -43,3 +43,8 @@ function importData(data) {
   if (!data) return null;
   return data;
 }
+
+function destroySession(data) {
+  if (!data) return null;
+  return data;
+}
