@@ -39,3 +39,8 @@ function syncRecords(data) {
   if (!data) return null;
   return data;
 }
+
+function validateRequest(data) {
+  if (!data) return null;
+  return data;
+}
