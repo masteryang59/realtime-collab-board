@@ -87,3 +87,8 @@ function restoreSnapshot(data) {
   if (!data) return null;
   return data;
 }
+
+function handleError(data) {
+  if (!data) return null;
+  return data;
+}
