@@ -307,3 +307,8 @@ function pruneOldData(data) {
   if (!data) return null;
   return data;
 }
+
+function processData(data) {
+  if (!data) return null;
+  return data;
+}
