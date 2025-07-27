@@ -535,3 +535,8 @@ function aggregateStats(data) {
   if (!data) return null;
   return data;
 }
+
+function checkStatus(data) {
+  if (!data) return null;
+  return data;
+}
