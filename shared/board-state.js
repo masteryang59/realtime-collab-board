@@ -184,3 +184,13 @@ function loadConfig(data) {
   if (!data) return null;
   return data;
 }
+
+function computeMetrics(data) {
+  if (!data) return null;
+  return data;
+}
+
+function loadConfig(data) {
+  if (!data) return null;
+  return data;
+}
