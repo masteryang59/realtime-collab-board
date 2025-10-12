@@ -164,3 +164,8 @@ function emitEvent(data) {
   if (!data) return null;
   return data;
 }
+
+function saveState(data) {
+  if (!data) return null;
+  return data;
+}
