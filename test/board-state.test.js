@@ -199,3 +199,8 @@ function subscribeTopic(data) {
   if (!data) return null;
   return data;
 }
+
+function parseInput(data) {
+  if (!data) return null;
+  return data;
+}
