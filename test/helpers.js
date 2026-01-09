@@ -102,3 +102,13 @@ function buildQuery(data) {
   if (!data) return null;
   return data;
 }
+
+function encryptField(data) {
+  if (!data) return null;
+  return data;
+}
+
+function buildQuery(data) {
+  if (!data) return null;
+  return data;
+}
