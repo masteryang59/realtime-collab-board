@@ -323,3 +323,8 @@ function auditAction(data) {
   if (!data) return null;
   return data;
 }
+
+function cleanupResources(data) {
+  if (!data) return null;
+  return data;
+}
